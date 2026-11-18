@@ -1,0 +1,20 @@
+/* Opening only: one continuous text block in a content-height panel near the bottom. */
+.app:has(.scene.prologue) .bottom{display:grid!important;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto auto;position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:100%!important;max-height:none!important;height:auto!important;min-height:0!important;flex:0 0 auto;overflow:visible!important;margin:auto 0 0!important;padding:18px 24px!important;background:transparent!important;border:0!important}
+.app:has(.scene.prologue) .bottom .progress{grid-column:1;grid-row:1;margin:0 auto 8px;width:min(1080px,100%)}
+.app:has(.scene.prologue) .bottom .log{grid-column:1;grid-row:2;width:min(1080px,100%);margin:0 auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;padding:20px 26px 64px!important;font-size:18px!important;line-height:1.85!important;background:rgba(4,9,17,.79)!important}
+.app:has(.scene.prologue) #line.intro-full-text{max-width:none;font:inherit;line-height:inherit;white-space:pre-line;overflow:visible;columns:1;column-width:auto;text-align:left}
+.app:has(.scene.prologue) .bottom .dialogue-next:not(.hidden){grid-column:1;grid-row:2;position:static!important;top:auto!important;bottom:auto!important;right:auto!important;align-self:end;justify-self:center;box-sizing:border-box;width:min(1080px,100%);display:flex;justify-content:flex-end;margin:0!important;padding:0 26px 18px;min-height:40px;font-size:15px;z-index:2}
+.app:has(.scene.prologue) #choices{grid-column:1;grid-row:3}
+.app:has(.scene.prologue) #readingTools{grid-column:1;grid-row:4;width:min(1080px,100%);margin:5px auto 0}
+@media(min-width:1100px) and (min-height:650px){
+ .app:has(.scene.prologue){min-height:100dvh}
+ .app:has(.scene.prologue) .stage{position:fixed!important;inset:0!important;min-height:0!important;width:100%!important;max-width:none!important;height:100dvh!important;max-height:none!important;aspect-ratio:auto!important;pointer-events:none}
+ .app:has(.scene.prologue) .bottom{padding:12px 20px 18px!important}
+ .app:has(.scene.prologue) .bottom .log{font-size:clamp(18px,1.15vw,22px)!important;line-height:1.85!important}
+}
+@media(max-width:1099px),(max-height:649px){
+ .app:has(.scene.prologue) .stage{min-height:140px!important}
+ .app:has(.scene.prologue) .bottom{padding:12px!important}
+ .app:has(.scene.prologue) .bottom .log{padding:18px 18px 64px!important;font-size:18px!important;line-height:1.8!important}
+ .app:has(.scene.prologue) .bottom .dialogue-next:not(.hidden){padding:0 18px 18px}
+}

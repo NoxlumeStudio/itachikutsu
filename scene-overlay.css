@@ -1,0 +1,75 @@
+/* A shared 16:9 coordinate space for artwork, hotspots, navigation and dialogue.
+   The navigation overlays the scene instead of subtracting from its height. */
+:root{--scene-size:min(100%,calc(100dvh * 16 / 9))}
+body .app{position:relative;width:var(--scene-size)!important;min-height:0;height:auto;max-width:100%;margin:0 auto;overflow-x:clip}
+body .app .stage{width:100%!important;max-width:100%;height:auto!important;min-height:0!important;aspect-ratio:16/9!important;flex:none;margin:0;border:0;box-shadow:none}
+body .app .bottom{width:100%!important;max-width:100%}
+body .app .topbar{position:absolute!important;inset:0 0 auto;z-index:12;display:flex!important;align-items:flex-start!important;justify-content:space-between;gap:10px;width:100%;height:auto;min-height:0;padding:10px 14px!important;border:0;background:transparent;box-shadow:none;pointer-events:none}
+body .app .topbar::after{display:none;content:none}
+body .app .topbar .brand{pointer-events:auto;flex:none;font-size:22px!important;line-height:1.3;letter-spacing:.12em;padding:6px 10px;background:#080f16bb;border-radius:3px;text-shadow:0 2px 5px #000}
+body .app .topbar .brand small{display:none}
+body .app .topbar .nav-toggle{pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;min-width:100px;min-height:40px;padding:7px 12px;background:#080f16dc;border:1px solid #b3a18b66;box-shadow:0 3px 12px #0005;color:#eee4d3;font:500 14px/1.4 sans-serif}
+body .app .topbar .actions{pointer-events:auto;display:none;position:absolute;top:calc(100% + 4px);right:14px;left:auto;width:min(290px,calc(100% - 28px));max-width:calc(100% - 28px);max-height:calc(100dvh - var(--responsive-header-bottom,60px) - 14px);padding:8px;border:1px solid #b3a18b66;background:#0d171ff5;box-shadow:0 12px 32px #0009;overflow-y:auto;overflow-x:hidden;flex-direction:column;align-items:stretch;gap:3px}
+body .app .topbar.menu-open .actions{display:flex}
+body .app .topbar .actions .smallbtn{display:flex;align-items:center;justify-content:flex-start;gap:9px;width:100%;min-height:43px;padding:10px 12px;font-size:14px!important;text-align:left;white-space:normal}
+body .app .stage .scene-label{top:70px}
+/* The opening retains its continuous, bottom-anchored reading panel. */
+body .app:has(.scene.prologue){min-height:100dvh}
+body .app:has(.scene.prologue) .stage{position:fixed!important;inset:0 auto auto 50%!important;transform:translateX(-50%);width:var(--scene-size)!important;height:100dvh!important;aspect-ratio:auto!important;pointer-events:none}
+@media(max-width:720px){
+ body .app .topbar{padding:6px 8px!important}
+ body .app .topbar .brand{font-size:19px!important;padding:6px 8px}
+ body .app .topbar .nav-toggle{min-height:38px;min-width:94px}
+ body .app .topbar .actions{right:8px;width:min(290px,calc(100% - 16px));max-width:calc(100% - 16px)}
+ body .app .stage .scene-label{top:58px}
+}
+/* Desktop: unobstructed artwork on the left, always-available actions on the right. */
+@media(min-width:1000px) and (min-height:560px){
+ :root{--navigation-rail:clamp(112px,7.5vw,128px);--scene-size:min(calc(100vw - var(--navigation-rail)),calc(100dvh * 16 / 9))}
+ body .app{width:calc(var(--scene-size) + var(--navigation-rail))!important;min-height:100dvh;margin:0!important}
+ body .app .stage{width:var(--scene-size)!important;margin:0!important}
+ body .app .bottom{width:var(--scene-size)!important;left:0!important;right:auto!important;transform:none!important}
+ body .app .topbar{inset:0 0 auto auto!important;width:var(--navigation-rail);height:100%;min-height:0;display:flex!important;flex-direction:column;align-items:stretch!important;justify-content:flex-start;gap:15px;padding:18px 6px!important;background:#0b131a;border-left:0;pointer-events:auto;overflow-y:auto;overflow-x:hidden}
+ body .app .topbar .brand{font-size:23px!important;line-height:1.4;padding:5px 8px 14px;background:transparent;border-bottom:1px solid #b3a18b33;border-radius:0;text-shadow:none}
+ body .app .topbar .brand small{display:block;font-size:10px;line-height:1.6;letter-spacing:.05em;margin:4px 0 0;font-weight:400}
+ body .app .topbar .nav-toggle{display:none}
+ body .app .topbar .actions,body .app .topbar.menu-open .actions{position:static;display:flex;width:100%;max-width:100%;max-height:none;padding:0;border:0;background:transparent;box-shadow:none;overflow:visible;flex:0 0 auto;gap:6px;flex-direction:column;align-items:stretch}
+ body .app .topbar .actions .smallbtn{min-height:44px;padding:10px 4px;font-size:13px!important;gap:6px}
+ body .app .topbar .actions .smallbtn:hover,body .app .topbar .actions .smallbtn:focus-visible{background:#b3a18b18}
+ body .app .stage .scene-label{top:5%}
+ body .app:has(.scene.prologue) .stage{inset:0 auto auto 0!important;transform:none}
+ body .reading-panel,body .sound-panel{top:12px!important;right:auto!important;left:max(8px,calc(var(--scene-size) - 308px));max-height:calc(100dvh - 24px)}
+}
+
+/* No ornamental rules across the artwork or beside it. */
+body .app .bottom{border:0!important;outline:0;box-shadow:none!important}
+body .app .topbar{border:0!important}
+/* The opening needs only its prose and its existing exit button. */
+body .app:has(.scene.prologue) .topbar{display:none!important}
+body .app:has(.scene.prologue){--navigation-rail:0px;--scene-size:min(100vw,calc(100dvh * 16 / 9));width:100%!important}
+@media(min-width:1000px) and (min-height:560px){
+ /* The bottom dialogue surface occupies any remaining height below the still. */
+ body .app:not(:has(.scene.prologue)) .bottom{min-height:max(124px,calc(100dvh - var(--scene-size) * 9 / 16 + 100px))!important}
+}
+
+/* Place names share the menu's readable type size; the hit areas are unchanged. */
+body .app .topbar .actions .smallbtn,body .app .stage .scene-label,body .hotspot.map-entry .name,body .overlay.ending-open .ending-novel .eyebrow{font-size:13px!important}
+body .hotspot.map-entry[aria-label^="スナック"] .name{position:absolute;left:0;right:auto;top:-48%;bottom:auto;transform:none}
+body .hotspot.map-entry[aria-label="小さな公園"] .name{position:absolute;left:36%;right:auto;top:-35%;bottom:auto;transform:none}
+body .hotspot.map-entry[aria-label="マサルの屋台"] .name{position:absolute;left:auto;right:calc(100% - 20px);top:-46%;bottom:auto;transform:none}
+body .hotspot.map-entry[aria-label="人体改造クリニック"] .name{position:absolute;left:-4%;right:auto;top:-48%;bottom:auto;transform:none}
+/* Text surfaces grow with their text instead of trapping prose in inner scrollboxes. */
+body .app .bottom,body .app .bottom .log,body .app .bottom #line{height:auto!important;max-height:none!important;overflow:visible!important}
+body .overlay.ending-open:not(.title-screen){overflow-y:auto;align-items:safe flex-end}
+body .overlay.ending-open:not(.title-screen) .panel:has(.ending-novel){height:auto!important;max-height:none!important;overflow:visible!important}
+body .overlay.ending-open .ending-novel-copy{height:auto;max-height:none;overflow:visible;line-height:1.65}
+@media(max-width:720px),(max-height:559px){
+ body .app:not(:has(.scene.prologue)) .bottom{position:relative!important;inset:auto!important;transform:none!important;margin:0!important}
+}
+
+/* Ending navigation already provides explicit continue/back actions. */
+body .overlay.ending-open #closeModal{display:none!important}
+
+/* Invitation choices belong to the park's existing bottom dialogue surface. */
+body .app .bottom #choices:has(.ramen-invite-choice){display:flex;justify-content:flex-end;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0 12px}
+body .app .bottom .ramen-invite-choice{flex:0 0 auto;width:auto;min-width:0;max-width:100%;white-space:nowrap;min-height:40px;padding:8px 14px;font:500 14px/1.4 sans-serif}

@@ -120,20 +120,14 @@
     warehouse:[['鴨下',37.5,16,25,76,'kamoshita'],['義眼',21.5,68,9,11,'eye'],['再刻印装置',83.5,29,14,42,'stamp'],['都市地図',3.5,7,16,42,'citymap'],['伝票台',27.5,33,11.5,14,'ledger'],['医療用保管箱',70,53,12.5,14,'medicalcase'],['倉庫の奥',65,14,13,35,'storeback']],
     snack:[['化粧ポーチ',10,46,10,15,'makeup'],['Re:naのポスター',55,8,11,29,'rena'],['カラオケ機',72,22,16,37,'karaoke'],['グラス',5.5,51,6,12,'glass'],['ミコ姐',39,22,17,71,'miko'],['カウンターの花',22.5,24,9,18,'flowers']],
     clinic:[['料金表',2.5,10,13,28,'clinicprice'],['手術台',20,42,33,23,'surgerybed'],['義足',89,18,9.5,48,'prostheticleg'],['診療記録',15,56,10,8,'medicalnotes'],['ヤブ先生',51.5,23,24,72,'yabu']],
-    park:[['蛍光灯',65,3,21,16,'parklight'],['ゴミ箱',84,54,10,24,'parkbin'],['水たまり',63,78,19,15,'parkpuddle'],['ベンチ',24,52,38,31,'parkbench'],['あかり',33,27,13,51,'akari'],['携帯ラジオ',43,44,7,10,'akariradio']]
+    park:[['蛍光灯',65,3,21,16,'parklight'],['ゴミ箱',84,54,10,24,'parkbin'],['水たまり',63,78,19,15,'parkpuddle'],['ベンチ',24,52,38,31,'parkbench'],['あかり',36,27,16,51,'akari'],['携帯ラジオ',43,44,7,10,'akariradio']]
   };
   const introPages = [
-    'この街では、壊れたものが人の姿をして歩いている。',
-    '鼬窟《いたちくつ》――都市の片隅に見捨てられ、行き場を失った建物たちが、互いに寄りかかるようにひしめく一画。光化学スモッグに陽は翳り、折り重なる屋根の下には薄闇が澱んでいる。軒先には義体の部品が日用品と並び、継ぎ接ぎだらけの身体が狭い路地を行き交う。どこまでが生身で、どこからが機械なのか。そんなことを気に留める者は、もういなかった。',
-    '千夜もまた、その片隅で育った。幼い頃、お辰に拾われて以来、ほかに帰る場所を知らない。今では駄菓子屋の手伝いや荷物の配達をしながら、路地から路地へと日々を過ごしている。',
-    'その日も、いつもの道を歩いていた。錆と油の臭気が湿った空気に混じり、喉の奥にまとわりつく。頭上には電線が複雑に絡まり、濡れた石畳には軒先の明かりが滲んでいた。',
-    '路地の中ほどでは、小さな駄菓子屋が橙色の光を灯している。少し離れた壁際には、男がひとり座り込んでいた。俯いた男の片脚には、使い古された義足が覗いている。関節の継ぎ目は錆びつき、もう長いこと手入れされていないようだった。',
-    '千夜はその姿を横目に通り過ぎようとして、ふと足を止めた。頭上の鉄板から、雫が滴っていた。ぽた、ぽた、と油膜に黒い輪が生まれ、ゆっくりと広がっては消える。次の一滴が落ちる頃には、何事もなかったように水面は静まり返っていた。千夜はしばらく、その繰り返しを眺めていた。',
-    'やがて歩き出すと、靴底が濡れた石畳を踏み、鈍い響きが路地の奥へ伝わっていく。幾重にも継ぎ足された建物の隙間を抜け、どこからともなく別の足取りが返ってきた。',
-    '鼬窟では、何もかもがどこかで繋がっている。雨水が錆を運び、腐食した鉄が崩れれば、その隙間にまた誰かが住み着く。壊れた義肢も拾われ、継ぎ接ぎされて新たな持ち主の手足となる。そうして朽ちながら、鼬窟は少しずつ姿を変え続けていた。',
-    '千夜はふと、先ほどの男を思い出した。あの義足も、いつかは取り外され、誰かの手に渡るのだろう。自分の身体だって、いつまで動くかわからない。けれど、不思議と怖くはなかった。',
-    'お辰に拾われた自分もまた、そうしてここにいるのだから。いつか朽ち果て、鼬窟の一部となる日が来ても、きっと寂しくはないだろう。',
-    'ここは千夜にとって、たったひとつの居場所だった。'
+    "この街では、壊れたものが人の姿をして歩いている。",
+    "鼬窟《いたちくつ》――都市の片隅に見捨てられ、行き場を失った建物たちが、互いに寄りかかるようにひしめく一画。",
+    "光化学スモッグに陽は翳り、折り重なる屋根の下には薄闇が澱んでいる。軒先には義体の部品が日用品と並び、継ぎ接ぎだらけの身体が狭い路地を行き交う。どこまでが生身で、どこからが機械なのか。そんなことを気に留める者は、もういなかった。",
+    "そんな鼬窟で暮らす者のひとりに、千夜がいた。幼い頃にお辰に拾われ、この街で育った。今では駄菓子屋の手伝いや、表には出せない荷物の配達をしながら日々を過ごしている。",
+    "錆びた屋根も、入り組んだ路地も、そこに暮らす人々も、千夜にとっては当たり前の日常だった。"
   ];
   const notes = {
     ramune:'青いガラスの奥に裸電球が歪んで映っている。瓶の口には古い傷がある。昔、誰かが無理にビー玉を取り出そうとしたのだろう。お辰に見つかれば、ひどく叱られたに違いない。',
@@ -147,6 +141,7 @@
   };
   function saveSilent(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch{}}
   function show(text='',who='',readKey=''){
+    $('line').classList.remove('intro-full-text');
     $('app').classList.toggle('dialogue-active',Boolean(text));
     renderText(text,who,readKey);
     $('choices').innerHTML='';
@@ -156,22 +151,20 @@
     queueAuto();
   }
   function showIntro(){
-    const index=Math.min(Math.max(state.introIndex||0,0),introPages.length-1);
-    state.introIndex=index;
-    show(introPages[index],'',`intro:${index}`);
-    $('skipBtn').hidden=false;
+    setAuto(false);cancelTimers();
+    const text=introPages.join('\n');
+    show(text,'','intro:full');revealNow();
+    currentReadKey='intro:full';fullyVisible=true;
+    $('line').classList.add('intro-full-text');
+    $('skipBtn').hidden=true;
     $('chapterText').textContent='PROLOGUE';
-    $('questShort').textContent=`${index+1} / ${introPages.length}`;
-    setNext(index===introPages.length-1?'駄菓子屋へ ▶':'次へ ▶');
+    $('questShort').textContent='鼬窟';
+    setNext('駄菓子屋へ ▶');
     $('nextWrap').classList.remove('hidden');
-    queueAuto();
     $('line').scrollTop=0;
     document.querySelector('.log').scrollTop=0;
   }
-  function advanceIntro(){
-    if(state.introIndex<introPages.length-1){state.introIndex++;showIntro();saveSilent();return}
-    finishIntro();
-  }
+  function advanceIntro(){finishIntro()}
   function finishIntro(){
     state.introDone=true;
     state.scene='shop';
@@ -662,7 +655,7 @@
   const ITEM_IMAGE={parcel:'assets/otatsu-parcel-bag.webp',slip:'assets/kamashita_delivery_front.png',receipt:'assets/kamashita_delivery_front.png',candy:'assets/otatsu_candy_wrapped_teal.webp',battery:'assets/masaru_radio_d_cell_battery.webp'};
   const ITEM_DESC={parcel:'「ベビーカステラ」と印刷された紙袋。金属がかすかに鳴る。',slip:'表は菓子、裏には義体部品の内訳が書かれている。',receipt:'鴨下の受領印が押された薄い紙。',candy:'お辰が持たせた小さな飴玉。まだ包み紙にくるまっている。',battery:'マサルの屋台でもらった替えの乾電池。まだ使えそうだ。小型のラジオなどに入れられる。'};
   function openPanel(inner,kind=''){setAuto(false);cancelTimers();modal='open';$('overlay').classList.remove('hidden','title-screen','ending-open','ending-a-open','ending-b-open');$('modalContent').dataset.panelKind=kind;$('modalContent').innerHTML=`<button class="smallbtn modalclose" id="closeModal" aria-label="閉じる">×</button>${inner}`;$('closeModal').onclick=closePanel}
-  function closePanel(){if(lyricsVisible){if(typeof window!=='undefined')window.ItachikutsuAudio?.stopSong();lyricsVisible=false;$('overlay').classList.remove('lyrics-open')}modal='';$('overlay').classList.add('hidden');$('overlay').classList.remove('title-screen','ending-open','ending-a-open','ending-b-open')}
+  function closePanel(){const offerRamen=lyricsVisible&&state.scene==='park'&&flag('battery_given')&&!state.dialogue;if(lyricsVisible){if(typeof window!=='undefined')window.ItachikutsuAudio?.stopSong();lyricsVisible=false;$('overlay').classList.remove('lyrics-open')}modal='';$('overlay').classList.add('hidden');$('overlay').classList.remove('title-screen','ending-open','ending-a-open','ending-b-open');if(offerRamen)endingChoiceB()}
   const SONG_LYRICS=[
     '割れたショーウィンドウにネオンが散って笑う。\nひび割れた未来でも、今は眩しすぎて。\n触れたら切れる光の粒、指先から零れてもいい。\n壊れるほどに、自由を信じたい。',
     'ガラスの夜に踊れ。砕けるまで構わない。\n痛みより強いリズム、この瞬間だけ生きたい。\nガラスの夜に踊れ。夢が血に変わるまで、\n声を枯らし叫んで、光の中で消えたい。',
@@ -672,6 +665,7 @@
   function lyricsModal(){
     openPanel(`<div class="song-card"><p class="song-card-kicker">RE:NA / ON THE AIR</p><h2>ガラスの夜に踊れ</h2><p class="song-credit">作詞・作曲：Re:na</p>${SONG_LYRICS.map(verse=>`<p class="song-verse">${esc(verse)}</p>`).join('')}</div>`);
     lyricsVisible=true;
+    $('closeModal').onclick=event=>{event?.stopPropagation?.();closePanel()};
     $('overlay').classList.add('lyrics-open');
     if(typeof window!=='undefined')window.ItachikutsuAudio?.playSong();
   }
@@ -727,9 +721,13 @@
     $('endA').onclick=()=>{closePanel();event('aApproach',[page('','“解体”の作業が始まる合図だった。お辰は視線を上げずに言う。'),...p('お辰','行ってみな。見習いなら、目で覚えな。'),page('','千夜は無言でうなずき、奥の部屋へ向かう。提灯の赤が背に映り、扉の隙間で揺れた。一歩、闇に吸い込まれる。')])};$('endWalk').onclick=()=>{closePanel();go('map')};
   }
   function endingChoiceB(){
-    openPanel('<p class="eyebrow">ラジオの歌が終わったあと</p><h2>青白い蛍光灯の下で</h2><p>あかりは、もう音のしないラジオを大切そうに抱えている。</p><div class="panel-actions"><button class="actionbtn primary" id="endB">ラーメンに誘う</button><button class="actionbtn" id="endWalk">もう少し街を歩く</button></div>');
-    $('endB').onclick=()=>{closePanel();event('ramenInvite',[...p('千夜','……腹、減ったな。ラーメンでも食うか。おごってやるよ'),...p('あかり','えっ、いいの？　会ったばかりなのに、悪いよ'),...p('千夜','別に。嫌ならいいけど'),...p('あかり','嫌じゃない！　……じゃあ、お言葉に甘えちゃおうかな')])};
-    $('endWalk').onclick=()=>{closePanel();go('map')};
+    setAuto(false);
+    show('あかりは、もう音のしないラジオを大切そうに抱えている。');
+    revealNow();
+    $('nextWrap').classList.add('hidden');
+    $('choices').innerHTML='<button type="button" class="choice ramen-invite-choice" id="endB">ラーメンに誘う</button><button type="button" class="choice ramen-invite-choice" id="endWalk">もう少し街を歩く</button>';
+    $('endB').onclick=()=>{if(modal||state.dialogue)return;show('');event('ramenInvite',[...p('千夜','……腹、減ったな。ラーメンでも食うか。おごってやるよ'),...p('あかり','えっ、いいの？　会ったばかりなのに、悪いよ'),...p('千夜','別に。嫌ならいいけど'),...p('あかり','嫌じゃない！　……じゃあ、お言葉に甘えちゃおうかな')])};
+    $('endWalk').onclick=()=>{if(modal||state.dialogue)return;show('');go('map')};
   }
   function recollectionList(){
     syncEndings();recollectionActive=true;
@@ -743,7 +741,7 @@
   function endingSequence(type,index=0,replay=false){
     const ending=ENDINGS[type];if(!ending)return;
     const last=index===ending.pages.length-1;
-    openPanel(`<div class="ending-novel ending-${type.toLowerCase()}">${!last?'<button class="quiet-skip ending-skip" id="endingSkip" aria-label="残りのエンディングをスキップ">SKIP »</button>':''}<p class="eyebrow">ENDING ${type} / ${esc(ending.title)}　${index+1} / ${ending.pages.length}</p><div class="ending-still" role="img" aria-label="${esc(ending.title)}のスチル"><span>ENDING ${type}<small>スチル準備中</small></span></div><h2>${esc(ending.title)}</h2><p class="ending-novel-copy">${esc(ending.pages[index])}</p><div class="panel-actions"><button class="actionbtn primary" id="endingNext">${last?'閉じる ×':'次へ ›'}</button><button class="actionbtn" id="endWalk">${replay?'回想一覧へ':'街へ戻る'}</button></div></div>`);
+    openPanel(`<div class="ending-novel ending-${type.toLowerCase()}">${!last?'<button class="quiet-skip ending-skip" id="endingSkip" aria-label="残りのエンディングをスキップ">SKIP »</button>':''}<p class="eyebrow">ENDING ${type} / ${esc(ending.title)}</p><div class="ending-still" role="img" aria-label="${esc(ending.title)}のスチル"><span>ENDING ${type}<small>スチル準備中</small></span></div><p class="ending-novel-copy">${esc(ending.pages[index])}</p><div class="panel-actions"><button class="actionbtn primary" id="endingNext">${last?'閉じる ×':'次へ ›'}</button><button class="actionbtn" id="endWalk">${replay?'回想一覧へ':'街へ戻る'}</button></div></div>`);
     $('overlay').classList.add('ending-open',`ending-${type.toLowerCase()}-open`);
     if(!last)$('endingSkip').onclick=()=>endingSequence(type,ending.pages.length-1,replay);
     $('endingNext').onclick=()=>{if(!last){endingSequence(type,index+1,replay);return}if(replay){recollectionList();return}mark(ending.flag);unlockedEndings[type]=true;persistEndings();closePanel();go('map')};
